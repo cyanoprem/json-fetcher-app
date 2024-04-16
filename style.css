@@ -1,0 +1,14 @@
+#nav {
+  text-align: center;
+}
+
+#postContainer {
+  text-align: center;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+#getBtn {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
