@@ -1,22 +1,23 @@
-const postNum = document.getElementById('postNum')
+const postId = document.getElementById('postId')
 const getBtn = document.getElementById('getBtn')
 const postTitle = document.getElementById('postTitle')
-let postNumber = 0
+let postIdNumber = 0
 
 
-const savePostNum = (event) => {
-  postNumber = event.target.value
+const savePostId = (event) => {
+  postIdNumber = event.target.value
 }
 
 const getPost = async () => {
-  const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${postNumber}`)
+  const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${postIdNumber}`)
   const data = await response.json()
   const {title} = data
   postTitle.innerText = `Post title: ${title}`
 }
 
-postNum.addEventListener('change', savePostNum)
+postId.addEventListener('change', savePostId)
 getBtn.addEventListener('click', getPost)
+
 
 
 
